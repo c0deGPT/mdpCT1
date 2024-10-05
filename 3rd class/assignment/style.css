@@ -1,0 +1,119 @@
+/* header */
+/* /header */
+/* main */
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(234, 234, 234);
+}
+
+/* nav */
+header nav{
+    margin: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: rgb(215, 215, 215);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header nav li{
+    margin-left: 30px
+}
+
+header nav a{
+    text-decoration: none;
+    color: #212121;
+}
+
+#nav-Design{
+    padding-left: 2%;
+}
+/* /nav */
+/* imageButton */
+#main-buttonWrap{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.main-button{
+    width:100px;
+    height:100px;
+}
+
+.main-buttons-image{
+    max-width: 100%;
+}
+/* /imageButton */
+/* hugeImage */
+#main-hugeImage{
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-hugeImage-image{
+    max-width: 100%;
+}
+
+#main-hugeImage-controlButton{
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btnstart-and-btnstop{
+    margin: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 18%;
+    padding-right: 18%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* /hugeImage */
+/* /main */
+
+
+/* footer */
+footer ul {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15%;
+    padding-right: 15%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(50, 50, 50);
+}
+
+#footerEmail{
+    padding-left:2%;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #f8f8f8;
+}
+/* /footer */
