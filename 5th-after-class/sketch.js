@@ -33,6 +33,7 @@ function draw() {
   penAngle = sin(millis()*0.002)
   penPosX = posX + penLength * sin(penAngle)
   penPosY = posY + penLength * cos(penAngle)
+  stroke(220)
   line(posX, posY, penPosX, penPosY)
   noStroke()
   fill(220)
