@@ -8,7 +8,8 @@ let ballGenerate = []
 let radius = 40
 
 function setup() {
-  createCanvas(800,600,myCanvas)
+  let theCanvas = document.getElementById("myCanvas")
+  createCanvas(800,600,theCanvas)
   posX = width/2
   posY = height/2
   penAngle = TWO_PI
