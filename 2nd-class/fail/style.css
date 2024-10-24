@@ -1,0 +1,15 @@
+body {
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.navbarscroll {
+    background-color:black
+}
+
+.bgimage {
+    height:100vh;
+    background:url('https://i.pinimg.com/originals/c5/ea/ce/c5eace66648b970bffb7f5f7ec034b5e.jpg');
+    background-size:cover;
+    position:relative;
+}

@@ -8,24 +8,47 @@
     <script src="sketch.js"></script>
   </head>
   <body>
+    <header>
+      <nav>
+        <a href="#List">HenryZhang</a>
+        <ul id="navButton">
+          <li> <a href="#List">List</a></li>
+          <li> <a href="#Design">Design</a></li>
+          <li> <a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <a href="https://editor.p5js.org/q2587750/sketches/Hvau1GFsO"target=_blank>my p5.js</a>
-      <div>
+      <div id="theCanvas">
         <canvas id="myCanvas"></canvas>
+        <a href="https://editor.p5js.org/q2587750/sketches/Hvau1GFsO"target="_blank">my p5.js</a>
       </div>
-      <img src="images/image3.png" class= "developing-image" alt="Qute Quokka 3">
-      <p class= "developing-description">image1</p>
-      <img src="images/image4.png" class= "developing-image" alt="Qute Quokka 4">
-      <p class= "developing-description">image2: The question is that the 2rd pendulum suddenly appeared in the position of 1st pendulum, and it remained still.</p>
-      <img src="images/image5.png" class= "developing-image" alt="Qute Quokka 5">
-      <p class= "developing-description">image3: I found there was no need to use 'setInterval()' to achive the oscillation of two pendulums, so I changed the effect of 2rd graphic.</p>
-      <img src="images/image6.png" class= "developing-image" alt="Qute Quokka 6">
-      <p class= "developing-description">image4: I want to achieve the effect that some circles appear with the oscillation of the pendulum, and then they take a linear movement.</p>
-      <img src="images/image7.png" class= "developing-image" alt="Qute Quokka 7">
-      <p class= "developing-description">image5: the ball generated didn't move</p>
-      <img src="images/image8.png" class= "developing-image" alt="Qute Quokka 8">
-      <p class= "developing-description">image6: the question is that I didn't put 'ballPosX += velXba ll PosY += velY' in the loop function 'for (let ball of ballGenerate){}'. </p>
-      
+      <div class="allDev">
+        <div class="eachDev">
+          <img src="images/image3.png" class= "developing-image" alt="Qute Quokka 3">
+          <p class= "developing-description">image1</p>
+        </div>
+        <div class="eachDev">
+          <img src="images/image4.png" class= "developing-image" alt="Qute Quokka 4">
+          <p class= "developing-description">image2: The question is that the 2nd pendulum suddenly appeared in the position of 1st pendulum, and it remained still.</p>
+        </div>
+        <div class="eachDev">
+          <img src="images/image5.png" class= "developing-image" alt="Qute Quokka 5">
+          <p class= "developing-description">image3: I found there was no need to use 'setInterval()' to achive the oscillation of two pendulums, so I changed the effect of 2rd graphic.</p>
+        </div>
+        <div class="eachDev">
+          <img src="images/image6.png" class= "developing-image" alt="Qute Quokka 6">
+          <p class= "developing-description">image4: I want to achieve the effect that some circles appear with the oscillation of the pendulum, and then they take a linear movement.</p>
+        </div>
+        <div class="eachDev">
+          <img src="images/image7.png" class= "developing-image" alt="Qute Quokka 7">
+          <p class= "developing-description">image5: the ball generated didn't move</p>
+        </div>
+        <div class="eachDev">
+          <img src="images/image8.png" class= "developing-image" alt="Qute Quokka 8">
+          <p class= "developing-description">image6: the question is that I didn't put 'ballPosX += velXba ll PosY += velY' in the loop function 'for (let ball of ballGenerate){}'. </p>
+        </div>
+      </div>     
     </main>
   </body>
 </html>
