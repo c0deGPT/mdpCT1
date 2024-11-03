@@ -7,7 +7,7 @@ let hungerValue
 
 function setup() {
   let theCanvas = document.getElementById("myCanvas")
-  createCanvas(windowWidth-350, windowHeight-100,theCanvas);
+  createCanvas(windowWidth-600, windowHeight-200,theCanvas);
   colorMode(HSB, TWO_PI,1,1)
   
   hungerRadio = createRadio()

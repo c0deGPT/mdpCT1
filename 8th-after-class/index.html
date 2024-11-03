@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
+    <script src="Box.js"></script>
+    <script src="sketch.js"></script>
+    <title>Gesture to create text-box(after class)</title>
+  </head>
+
+  <body>
+    <header>
+        <nav>
+            <a href="#List">HenryZhang</a>
+            <ul id="navButton">
+              <li> <a href="#List">List</a></li>
+              <li> <a href="#Design">Design</a></li>
+              <li> <a href="#Contact">Contact</a></li>
+            </ul>
+          </nav>
+    </header>
+    <main>
+        <div id="theCanvas">
+            <a href="https://editor.p5js.org/q2587750/sketches/kPu6h8tuj"target="_blank">my p5.js</a>
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">Step1: In the beginning, I want to use vertex() to create a box, so I can add different texture to this box, but there is something wrong and I fail to repair it.</p>
+            <img src="process/process1.png" class="desc-img" alt="Qute Quokka 1">
+        </div>
+
+        <div class="desc">
+          <p class= "desc-text">Step2: Therefore, I use box() to replace it, although I can't let one box's texture different, users will not realize this point because of viewing angle.</p>
+          <img src="process/process2-1.png" class="desc-img" alt="Qute Quokka 2">
+          <img src="process/process2-2.png" class="desc-img" alt="Qute Quokka 3">
+          <img src="process/process2-3.png" class="desc-img" alt="Qute Quokka 4">
+        </div>
+
+        <div class="desc">
+          <p class= "desc-text">Step3: Then, I continue to program and fix some bugs.</p>
+          <img src="process/process3-1.png" class="desc-img" alt="Qute Quokka 5">
+          <img src="process/process3-2.png" class="desc-img" alt="Qute Quokka 6">
+        </div>
+
+        <div class="desc">
+          <p class= "desc-text">Step4: The next question is that there is no bug report displayed, but the box doesn't appear according to my expectation, so I have to use console.log() to check whether each step run correctly.</p>
+          <img src="process/process4.png" class="desc-img" alt="Qute Quokka 7">
+        </div>
+
+        <div class="desc">
+          <p class= "desc-text">Step5: I find question is that as I searched for the tutorial video, I didn't check the time and version of ml5, in which 'landmarks' is not applicable and replaced by 'keypoints'. Otherwise, my code about distance also has some questions, thus the next step is make the box generated in random positions.</p>
+          <img src="process/process5.png" class="desc-img" alt="Qute Quokka 8">
+        </div>
+
+        <div class="desc">
+          <p class= "desc-text">Step6: Finally, it works.</p>
+          <img src="process/process6-1.png" class="desc-img" alt="Qute Quokka 9">
+          <img src="process/process6-2.png" class="desc-img" alt="Qute Quokka 10">
+        </div>
+    </main>
+
+  </body>
+</html>
