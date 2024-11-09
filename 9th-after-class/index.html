@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
+    <script src="Particle.js"></script>
+    <script src="sketch.js"></script>
+    <title>Gesture to create text-box 2.0(after class)</title>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <a href="#List">HenryZhang</a>
+            <ul id="navButton">
+              <li> <a href="#List">List</a></li>
+              <li> <a href="#Design">Design</a></li>
+              <li> <a href="#Contact">Contact</a></li>
+            </ul>
+          </nav>
+    </header>
+    <main>
+        <div id="theCanvas">
+            <a href="https://editor.p5js.org/q2587750/sketches/iYW_2zkS3"target="_blank">my p5.js</a>
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">1.The question is that if there are too many circles connected, their speed will become very slow, because I use 'p5.Vector.lerp(, , 0.5)'. But if I increase this number, they will exceed the border.</p>
+            <img src="processes/0-1.png" class="desc-img" alt="Qute Quokka 0">
+            <img src="processes/1-1.png" class="desc-img" alt="Qute Quokka 1">
+            <img src="processes/1-2.png" class="desc-img" alt="Qute Quokka 2">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">2.So I changed the way of border detection and adjustment, but it led to a question that the velocity disappeared.</p>
+            <img src="processes/2-1.png" class="desc-img" alt="Qute Quokka 3">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">3.Thus, I used constrain() to change the pos when circle touches border.</p>
+            <img src="processes/3-1.png" class="desc-img" alt="Qute Quokka 4">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">4.The next step is to make each letter connect only with specific letter objects. So, I set up conditional checks in Particle.js and passed 'P', 'O', 'R', and 'T' to particleType in sketch.js. Then, particleType is assigned to type in Particle.js, which allows different conditions in contact to work based on the conditional checks.</p>
+            <img src="processes/4-1.png" class="desc-img" alt="Qute Quokka 5">
+            <img src="processes/4-2.png" class="desc-img" alt="Qute Quokka 6">
+            <img src="processes/4-3.png" class="desc-img" alt="Qute Quokka 7">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">5.The remaining part is how to avoid overlapping between circles.</p>
+            <img src="processes/5-1.png" class="desc-img" alt="Qute Quokka 8">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">6.I tried to add a repulsion, but it couldn't solve this question, since I have contact().</p>
+            <img src="processes/6-1.png" class="desc-img" alt="Qute Quokka 9">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">7.So I changed my thinking. There are two cases of adhesion of the ball: one is because the ball appears in the overlapping position when it is just generated, so I only need to add a judgment that the ball will not contact() when it is just generated to avoid this situation; The other is that some balls will be restricted to the boundary position when they reach the boundary, I have not found a solution yet.</p>
+            <img src="processes/7-1.png" class="desc-img" alt="Qute Quokka 10">
+        </div>
+    </main>
+  </body>
+</html>
