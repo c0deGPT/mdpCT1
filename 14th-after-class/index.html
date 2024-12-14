@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W14-musicMachine</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#List">HenryZhang</a>
+            <ul id="navButton">
+              <li> <a href="#List">List</a></li>
+              <li> <a href="#Design">Design</a></li>
+              <li> <a href="#Contact">Contact</a></li>
+            </ul>
+          </nav>
+    </header>
+    <main>
+        <div id="theCanvas">
+            <img src="video/video1-3.gif" alt="video1">
+            <p class= "desc-text">Here is the full video in Youtube <a href="https://youtu.be/cji1caUrh-A" target="_blank">https://youtu.be/cji1caUrh-A</a></p>
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">1. I used the 'myDrumMachine' framework from the W13 class to visualize it, and I also want to apply some effects we learned before, such as balls' linear movement. So, I added 'numBalls' and its related attributes, using ballToDrums to let a drum trigger a group of balls.</p>
+            <img src="image/1-1.png" class="desc-img" alt="Qute Quokka 0">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">2. But I soon found one question, as I pressed drums, balls had a quite short change in color and size, that's why I added 'ballDecayTimers' to alter this situation.</p>
+            <img src="image/2-1.png" class="desc-img" alt="Qute Quokka 1">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">3. After all things were finished, it's time to combine it with Arduino.</p>
+            <img src="image/3-1.png" class="desc-img" alt="Qute Quokka 2">
+            <img src="image/3-2.png" class="desc-img" alt="Qute Quokka 3">
+            <img src="image/3-3.png" class="desc-img" alt="Qute Quokka 4">
+            <img src="image/3-4.png" class="desc-img" alt="Qute Quokka 5">
+            <img src="image/3-5.png" class="desc-img" alt="Qute Quokka 6">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">4.Then, I used tinkercard to clarify my thinking, making sure the resistance.</p>
+            <img src="image/4-1.png" class="desc-img" alt="Qute Quokka 7">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">5. In this process, I forgot to add'Serial.print(',')' between 'Serial.print(digitalRead())', and I used one more 'Serial.println('.')', which made troubles later.</p>
+            <img src="image/5-1.jpg" class="desc-img" alt="Qute Quokka 8">
+            <img src="image/5-2.png" class="desc-img" alt="Qute Quokka 9">
+        </div>
+        
+        <div class="desc">
+            <p class= "desc-text">6. Afterwards, I added some necessary parts based on code constructed before.</p>
+            <img src="image/6-1.png" class="desc-img" alt="Qute Quokka 10">
+            <img src="image/6-2.png" class="desc-img" alt="Qute Quokka 11">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">7. Test it.</p>
+            <img src="image/7-1.jpg" class="desc-img" alt="Qute Quokka 12">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">8. Based on the gripping posture, mount the installation onto the cardboard box and continue testing.</p>
+            <img src="image/8-1.jpg" class="desc-img" alt="Qute Quokka 13">
+            <img src="image/8-2.jpg" class="desc-img" alt="Qute Quokka 14">
+        </div>
+
+        <div class="desc">
+            <p class= "desc-text">9. Upgrading visual performance.</p>
+            <img src="image/9-1.png" class="desc-img" alt="Qute Quokka 15">
+            <img src="image/9-2.jpg" class="desc-img" alt="Qute Quokka 16">
+        </div>
+    </main>
+  </body>
+</html>
