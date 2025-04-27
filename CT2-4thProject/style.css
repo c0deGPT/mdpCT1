@@ -1,0 +1,105 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(240, 240, 240);
+}
+
+header nav {
+  margin: 0;
+  max-width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: rgb(215, 215, 215);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+header nav li {
+  margin-left: 30px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #212121;
+}
+
+#theCanvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+#buttonGroup {
+  margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#buttonGroup button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  border: 2px solid #212121;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+#buttonGroup button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+#buttonGroup button.active {
+  background-color: #212121;
+  color: white;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desc {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.desc-text {
+  margin: 20px 10%;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.desc-img {
+  width: 80%;
+  height: auto;
+  margin-top: 20px;
+}
+
+video.desc-img {
+  width: 80%;
+  height: auto;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 12px;
+}

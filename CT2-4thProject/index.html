@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sketch.js"></script>
+    <title>CT2-1st-project</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#List">HenryZhang</a>
+        <ul id="navButton">
+            <li><a href="#List">List</a></li>
+            <li><a href="#Design">Design</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div id="theCanvas">
+        <div id="buttonGroup"></div>
+        <div id="desc" class="desc"></div>
+    </div>
+</main>
+
+<script>
+const contents = [
+    {
+        video: ["effect/video1.mp4", "effect/video2.mp4"],
+        steps: [
+            { text: "1. By adjusting the phase and period of the ramp, I discovered some very cool color tone changes.", img: ["process/1-1.png"] },
+            { text: "2. Then I became curious about connecting two ramps using a composite and adjusting the comp operation mode, wondering what would happen when linking it to the lookup.", img: ["process/1-2.png", "process/1-3.png"] },
+            { text: "3. After that, I kept experimenting and got some fascinating results.", img: ["process/1-4.png", "process/1-5.png"] },
+            { text: "4. Added dynamic visual effects.", img: ["process/1-6.png"] },
+            { text: "5. Added edge, mirror, and transform to enhance the visual variety.", img: ["process/2-1.png"] }
+        ]
+    },
+    {
+        video: ["effect/video3.mp4"],
+        steps: [
+            { text: "1. For this preset, I wanted to keep only the outline using edge and make additional changes.", img: ["process/3-1.png", "process/3-2.png"] },
+            { text: "2. Then I added some tile and mirror effects to create this look.", img: ["process/3-3.png"] }
+        ]
+    },
+    {
+        video: ["effect/video4.mp4", "effect/video5.mp4", "effect/video6.mp4"],
+        steps: [
+            { text: "1. I achieved this effect and started trying more variations.", img: ["process/4-1.png"] },
+            { text: "2. By applying a copy, I created this effect.", img: ["process/4-2.png"] },
+            { text: "3. After integrating it into geometry and adding line material, I got this result.", img: ["process/4-3.png"] },
+            { text: "4. Further enhanced it by adding ramp and composite operations.", img: ["process/4-4.png"] }
+        ]
+    },
+    {
+        video: ["effect/video7.mp4", "effect/video8.mp4", "effect/video9.mp4"],
+        steps: [
+            { text: "1. I initially created an irregularly shaped sphere, but the goal was to generate multiple spheres.", img: ["process/5-1.png"] },
+            { text: "2. Realized it was due to not adjusting the original sphere's size, and then tried different color variations.", img: ["process/5-2.png"] },
+            { text: "3. By applying multiple noises to instances, I achieved spheres of varying sizes and colors.", img: ["process/5-3.png"] },
+            { text: "4. Learned how to input audio, use math to combine two tracks, and visualize it through audiospectrum, then smoothed the data with resample.", img: ["process/5-4.png", "process/5-5.png", "process/5-6.png", "process/5-7.png"] },
+            { text: "5. After matching the pixel lengths, I successfully applied the audio-driven changes to geometry instances.", img: ["process/5-8.png"] },
+            { text: "6. Added blur and noise effects to enrich the visuals.", img: ["process/5-9.png", "process/5-10.png"] }
+        ]
+    },
+    {
+        video: ["effect/video10.mp4", "effect/video11.mp4", "effect/video12.mp4"],
+        steps: [
+            { text: "1. Created this effect using feedback and composite settings.", img: ["process/6-1.png"] },
+            { text: "2. Adjusted rotation values to get different patterns.", img: ["process/6-2.png", "process/6-3.png"] },
+            { text: "3. Animated the rotation dynamically by multiplying absTime*seconds*10.", img: ["process/6-4.png"] },
+            { text: "4. Changed the pivot point and added color variations.", img: ["process/6-5.png"] },
+            { text: "5. Applied a transform and set tile mode to mirror to see the effects.", img: ["process/6-6.png", "process/6-7.png"] },
+            { text: "6. Experimented by stacking different types of ramps.", img: ["process/6-8.png"] }
+        ]
+    },
+    {
+        video: ["effect/video13.mp4", "effect/video14.mp4", "effect/video15.mp4", "effect/video16.mp4"],
+        steps: [
+            { text: "1. Built the foundation for a more graphical reversion effect.", img: ["process/7-1.png"] },
+            { text: "2. Created multiple masks.", img: ["process/7-2.png"] },
+            { text: "3. Used beats to control the size and speed changes of the masks.", img: ["process/7-3.png"] },
+            { text: "4. Combined masks and graphics using multiply operations.", img: ["process/7-4.png"] },
+            { text: "5. Experimented with multiple layers of multiply.", img: ["process/7-5.png"] },
+            { text: "6. Selected parts to progressively animate based on beat variations.", img: ["process/7-6.png"] },
+            { text: "7. Integrated a circular ramp for a more dynamic effect.", img: ["process/7-7.png", "process/7-8.png", "process/7-9.png"] },
+            { text: "8. Added mirror and more ramps to enrich the pattern.", img: ["process/7-10.png"] },
+            { text: "9. Tweaked ramp and comp operation modes for new results.", img: ["process/7-11.png"] }
+        ]
+    },
+    {
+        video: ["effect/video17.mp4", "effect/video18.mp4", "effect/video19.mp4", "effect/video20.mp4"],
+        steps: [
+            { text: "1. Tried creating a circle growth effect but it got stuck after a short expansion.", img: ["process/8-1.png"] },
+            { text: "2. Found out it needed configuration adjustments.", img: ["process/8-2.png"] },
+            { text: "3. Now the growth continues until it reaches the boundary.", img: ["process/8-3.png"] },
+            { text: "4. Added limit and edge settings to change the growth textures.", img: ["process/8-4.png"] },
+            { text: "5. Applied mirror after feedback to create mirrored growth.", img: ["process/8-5.png"] },
+            { text: "6. Replaced the original noise with an actual image texture.", img: ["process/8-6.png"] }
+        ]
+    }
+];
+
+const buttonGroup = document.getElementById("buttonGroup");
+contents.forEach((_, index) => {
+    const btn = document.createElement('button');
+    btn.innerText = `Scene ${index + 1}`;
+    btn.onclick = () => switchContent(index);
+    buttonGroup.appendChild(btn);
+});
+
+function switchContent(index) {
+    const theCanvas = document.getElementById("theCanvas");
+    const desc = document.getElementById("desc");
+
+    document.querySelectorAll("#buttonGroup button").forEach((btn, idx) => {
+        if (idx === index) {
+            btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
+        }
+    });
+
+    theCanvas.querySelectorAll('video').forEach(video => video.remove());
+
+    const videos = contents[index].video;
+    const videoList = Array.isArray(videos) ? videos : [videos];
+    videoList.forEach(videoPath => {
+        const video = document.createElement('video');
+        video.className = 'desc-img';
+        video.src = videoPath;
+        video.controls = true;
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        buttonGroup.parentNode.insertBefore(video, buttonGroup);
+    });
+
+    desc.innerHTML = '';
+
+    contents[index].steps.forEach(step => {
+        const p = document.createElement('p');
+        p.className = 'desc-text';
+        p.innerText = step.text;
+        desc.appendChild(p);
+
+        step.img.forEach(imgPath => {
+            const img = document.createElement('img');
+            img.className = 'desc-img';
+            img.src = imgPath;
+            desc.appendChild(img);
+        });
+    });
+}
+</script>
+
+</body>
+</html>
